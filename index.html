@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Générateur de logo</title>
+    <script src="my_components/index.js" type="module"></script>
+</head>
+<h1>Générateur de logo</h1>
+
+<button type="button" onclick="basicBackGround()">White</button>
+<button type="button" onclick="OSS117()">OSS117</button>
+<button type="button" onclick="lotr()">ring</button>
+<button type="button" onclick="lotr1()">ring_black</button>
+<button type="button" onclick="gif()">GIF</button>
+
+<button type="button" onclick="myFunction()">Glace</button>
+<button type="button" onclick="background1()">Flammes</button>
+<button type="button" onclick="hisoka()">Hisoka</button>
+
+<p>Cliquez ici pour connaître la date et l'heure</p>
+<button onclick="getElementById('QuelleHeure').innerHTML=Date()">Quelle heure est-il?</button>
+<p id="QuelleHeure"></p>
+Enter your Logo: <input type="text" id="logo" onchange="traiteClick()">
+<button onclick="traiteclick()">Clique</button>
+<mon-logo id="monLogo" text="Comment est votre blanquette ?" couleur="black" animation="ping"></mon-logo>
+<script>
+    function myFunction() {
+        document.body.style.backgroundColor = "#f3f3f3";
+        document.body.style.backgroundImage = "url('my_components/images/background_image.jpg')";
+        document.body.style.backgroundSize = 'cover';
+    }
+
+    function OSS117() {
+        document.body.style.backgroundColor = "#f3f3f3";
+        document.body.style.backgroundImage = "url('my_components/images/OSS117.jpg')";
+        document.body.style.backgroundSize = 'cover';
+
+    }
+
+    function lotr() {
+        document.body.style.backgroundColor = "#f3f3f3";
+        document.body.style.backgroundImage = "url('my_components/images/the_ring.jpg')";
+        document.body.style.backgroundSize = 'cover';
+    }
+
+    function lotr1() {
+        document.body.style.backgroundColor = "#f3f3f3";
+        document.body.style.backgroundImage = "url('my_components/images/black_ring.jpg')";
+        document.body.style.backgroundSize = 'cover';
+    }
+
+    function gif() {
+        document.body.style.backgroundColor = "#f3f3f3";
+        document.body.style.backgroundImage = "url('my_components/images/giphy1.gif')";
+        document.body.style.backgroundSize = 'cover';
+    }
+
+
+    function basicBackGround() {
+        document.body.style.backgroundColor = "#f3f3f3";
+        document.body.style.backgroundImage = "url('my_components/images/white.jpg')";
+        document.body.style.backgroundSize = 'cover';
+    }
+
+    function background1() {
+        document.body.style.backgroundColor = "#f3f3f3";
+        document.body.style.backgroundImage = "url('my_components/images/flammes.jpg')";
+        document.body.style.backgroundSize = 'cover';
+    }
+
+    function hisoka() {
+        document.body.style.backgroundColor = "#f3f3f3";
+        document.body.style.backgroundImage = "url('my_components/images/hisoka.jpg')";
+        document.body.style.backgroundSize = 'cover';
+
+    }
+</script>
+<script>
+    let logo = document.querySelector('#monLogo');
+
+    function traiteclick() {
+        var x = document.getElementById("logo").value;
+        document.getElementById("monLogo").innerHTML = x;
+        logo.changeText(x)
+    }
+</script>
+
+</html>
